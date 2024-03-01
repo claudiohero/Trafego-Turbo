@@ -1,0 +1,561 @@
+@import  url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@font-face {
+    font-family: Audio;
+    src: url(Fonts/Audiowide-Regular.ttf);
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+@media screen and (max-width: 600px) {
+    body{
+        background-size: 100% 100%;
+    }
+    header{
+        font-size: 2.1vh !important;
+        width: 100% !important;
+    }
+    .logo img{
+        width: 20vh !important;
+    }
+    
+   .acelere h1{
+        font-size: 3vh !important;
+        margin-left: 0.9vh !important;
+        margin-right: 0.9vh !important;
+   }
+
+   .ben-ges-mid{
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    font-size: 2.5vh !important;
+   }
+
+   .foguete{
+        float:none !important;
+        width: 100% !important;
+   }
+   .panfletagem-digital{
+    float: none !important;
+    width: 100% !important;
+   }
+   .apresentação{
+        background:none !important;
+        padding: 2vh 0 1vh 1vh !important;
+        margin-top: 0 !important;
+        width: 96% !important;
+        margin: 0 1vh 0 1vh !important;
+   }
+
+   .apresentação h1{
+        color: #ffffff !important;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.938) !important;
+        font-size: 2.5vh !important;
+        margin-right: 0 !important; 
+        padding-bottom: 1vh !important;
+   }
+
+   .apresentação p {
+        color: #ffffff;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.938) !important;
+        font-size: 2vh !important;
+        margin-right: 0 !important;
+        text-align: none !important;
+    }
+
+    .apresentação-midias{
+        background:none !important;
+        width: 100% !important;
+        padding: 1vh 1vh 1vh 1vh !important;
+        margin-top: 2vh !important;
+    }
+
+    .apresentação-midias h1{
+        color: #ffffff !important;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.938) !important;
+        margin-right: 0 !important;
+        font-size: 3.5vh !important;
+    }
+
+    .apresentação-midias p{
+        color: #ffffff !important;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.938) !important;
+        margin-right: 0 !important;
+        font-size: 2vh !important;
+    }
+    .btn1{
+    margin-bottom: 1em !important;
+    padding: 0.2em 1em 0.2em 1em !important;
+    border-radius: 1vh !important;
+    font-size: 2.5vh !important;
+    }
+
+    .acelere p{
+        font-size: 2vh !important;
+    }
+
+    .oferecemos {
+        font-size: 4vh !important;
+    }
+
+    .imagem-container{
+        display: grid !important;
+        gap: 3vh !important;
+    }
+
+    .bg-container{
+        padding-left: 1vh !important;
+        padding-right: 1vh !important;
+    }
+
+    .descricao {
+        font-size: 2vh !important;
+        padding-bottom: 1vh !important;
+    }
+    
+    /*============ INICIO PACOTES MOBILE===============*/
+    .pacotes{
+        display: grid !important;
+        justify-content: center !important;
+    }
+
+
+    /*============ FIM PACOTES MOBILE===============*/
+    
+    .informações {
+        display: grid !important;
+    }
+
+    .informações img{
+        float: none !important;
+        padding-left: 0 !important;
+        margin-right: 0 !important;
+        width: 90% !important;
+    }
+
+    .informações h1{
+        text-align: center !important;
+    }
+
+    .informações p{
+        text-align: center !important;
+    }
+    .social-media ul{
+        padding-left: 0 !important;
+        justify-content: center !important;
+    }
+    .divisão-rodapé{
+        margin: 5vh 5vh 2vh 5vh !important;
+    }
+}   
+
+/*--------------- FIM DO MEDIA QUERRY -------------------------------*/
+
+
+/*----------------- CLASSES AFETADAS PELA ANIMAÇÃO DO SCRIPT: ScrollReveal -------------------------------*/
+.imagem-container, .rodapé, .apresentação, .oferecemos-reveal, .bg-pacotes1, .bg-pacotes2, .bg-pacotes3, .bg-pacotes4{
+    visibility: hidden;
+}
+/*--------------- FIM DAS CLASSES AFETADAS PELA ANIMAÇÃO DO SCRIPT: ScrollReveal -------------------------------*/
+body {
+    text-align: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to left, #110b02e0, #2d2e2e, #19191a, #000000 );
+    width: 100%;
+    background-size: 500% 100%;
+    margin-top: 20vh;
+    animation: background-animado 5s infinite alternate;
+}
+
+@keyframes background-animado {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+header{
+    position: fixed;
+    font-size: 3vh;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 0.5em;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Estilo para o submenu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn{
+    color:#000000;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Mostra o submenu quando o mouse passa sobre o item  Serviços do menu */
+.dropdown:hover .dropdown-content {
+    display: block;
+    background: linear-gradient(to right, #f19845, #ee7716, #c75508);
+    
+}
+/* Fim do estilo do submenu serviços */
+
+header li{
+    color: #ffffff;
+}
+header.rolagem{
+    background-color: #000000c9;
+    transition: 2s;
+}
+
+header.rolagem li, .dropbtn{
+    color: #ffffff;
+}
+
+.logo{
+    padding-top: 1vh;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.25em;
+    width: 4.125em;
+}
+
+.logo img{
+    width: 28vh;
+}
+
+.cabeçalho-link{
+    display: flex;
+    gap: 2em;
+    padding-top: 1em;
+    cursor: pointer;
+    align-items: center;
+    font-size: 0.75em;
+    border: 0.0625em;
+}
+
+.cabeçalho-link :hover{
+    color: #000000;
+    transition: 0.4s all;
+    border: 0.0625em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    transition: box-shadow 0.3s ease;
+    background: linear-gradient(to right, #f19845, #ee7716, #c75508);
+    border-radius: 5px;
+
+}
+
+.acelere{
+    text-align: center;
+    padding-top: 8vh;
+    padding-bottom: 11vh;
+    margin-bottom: 6vh;
+    font-size: 4vh;
+    background-image: url(https://i.imgur.com/yHLWsOU.png);
+    background-size: cover;
+}
+
+.destaque img{
+    width: 100%;
+    height: 50%;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+.midia img{
+    width: 100%;
+}
+
+.acelere h1{
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.938);
+}
+
+.acelere p{
+    font-size: 3.1vh;
+    padding-bottom: 3vh;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.938);
+}
+
+.ben-ges-mid{
+    text-align: center;
+    padding-top: 8vh;
+    padding-bottom: 2vh;
+    margin-bottom: 3vh;
+    font-size: 4vh;
+}
+
+.ben-ges-mid h1{
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.938);
+}
+
+.apresentação{
+    padding: 3vh 0 3vh 3vh;
+    background-color: rgba(226, 224, 224, 0.425);
+    float: right;
+    margin-top: 28vh;
+    width: 50%;
+    border-radius: 2vh;
+    max-width: 100%;
+}
+
+.apresentação-midias{
+    padding: 3vh 0 3vh 3vh;
+    background-color: rgba(226, 224, 224, 0.425);
+    float: right;
+    margin-top: 15vh;
+    width: 50%;
+    border-radius: 2vh;
+    max-width: 100%;
+}
+.apresentação-midias p{
+    font-size: 2.5vh;
+    margin-right: 12vh;
+    text-align: left;
+}
+
+.apresentação-midias h1{
+    font-weight: bold;
+    color: #000000;
+    font-size: 4.5vh ;
+    margin-right: 12vh;
+    padding-bottom: 3vh;
+}
+
+.apresentação p {
+    font-size: 2.5vh;
+    margin-right: 12vh;
+    text-align: left;
+}
+
+.apresentação h1{
+    font-weight: bold;
+    color: #000000;
+    font-size: 4.5vh ;
+    margin-right: 12vh;
+    padding-bottom: 3vh;
+}
+
+.sublinhado{
+    text-decoration: underline;
+}
+
+.foguete {
+    margin-top: 7vh;
+    float: left;
+    width: 45%;
+}
+
+.panfletagem-digital{
+    float: left;
+    width: 50%;
+}
+
+.clear-float{
+    clear: both;
+}
+
+.oferecemos{
+    margin-top: 15vh;
+    text-align: center;
+    font-size: 5.3vh;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.938);
+}
+
+.imagem-container {
+    clear: both;
+    display: flex; /* Usa o modelo de layout flexível para alinhar as imagens lado a lado */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 10vh; 
+    margin-top: 5vh; 
+    margin-bottom: 5vh;
+}
+.bg-container{
+    border-radius: 7px;
+    background-color: rgba(226, 224, 224, 0.425);
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+
+.bg-container p {
+    text-align: left;
+}
+
+.bg-container h1{
+    padding-top: 2vh;
+    font-size: 3vh;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.938);
+}
+
+.imagem-container img {
+    width: 40vh;
+    max-width: 100%; 
+}
+
+.descricao {
+    font-size: 2.5vh ;
+    margin-top: 1vh;
+    width: 40vh;
+}
+
+/*=============== INICIO PACOTES =============*/
+.descricao-pacotes{
+    font-size: 2.5vh ;
+    margin-top: 1vh;
+}
+
+.pacotes{
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+    clear: both;
+    justify-content: center;
+    display: flex;
+    gap: 2vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+.pacotes img{
+    width: 70%;
+}
+
+.bg-pacotes1, .bg-pacotes2, .bg-pacotes3, .bg-pacotes4 {
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+    background-color: rgba(226, 224, 224, 0.425);
+}
+
+.bg-pacotes1, .bg-pacotes2, .bg-pacotes3, .bg-pacotes4, h1{
+    padding-top: 1vh;
+    font-size: 3vh;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.938);
+}
+
+.cor-larj{
+    color: #c75508;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+/*=============== FIM PACOTES =============*/
+
+.btn1{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 1em;
+    font-size: 3vh;
+    font-weight: bold;
+    transition: box-shadow 0.3s ease;
+    padding: 0.3em 1em 0.3em 1em;
+    background: linear-gradient(to right, #f19845, #ee7716, #c75508);
+    cursor: pointer;
+    border-radius: 0.5vh;
+    
+}
+.btn1:hover {
+    box-shadow: 0 0 18px 13px rgba(252, 235, 138, 0.473); /* Adiciona uma sombra ao redor do botão quando o mouse passa por cima */
+    background: linear-gradient(#ffd86e, #ffd82c, #c5a204);
+}
+
+.informações img{
+    padding-left: 5vh;
+    float: left;
+    cursor: pointer;
+    display: flex;
+    margin-right: 45vh;
+    clear: both;
+}
+
+.social-media ul{
+    padding-left: 20.4vh;
+    padding-top: 2vh;
+    display: flex;
+    text-align: center;
+    gap: 5.8vh;   
+}
+
+.social-media a{
+    padding-top: 1vh;
+    font-size: 2.5vh;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.social-media i:hover{
+    color: #000000;
+}
+.informações{
+    padding-top: 2vh;
+    clear: both;
+    color: white;
+    padding-top: 6vh;
+    display: flex;
+    gap: 5vh;
+}
+
+.informações h1{
+    text-align: left;
+    padding-bottom: 1vh;
+}
+
+.informações p{
+    cursor: pointer;
+    text-align: left;
+    padding-bottom: 0.5vh;
+    color: white;
+}
+
+.informações p:hover{
+    color: #000000;
+}
+
+.divisão-rodapé{
+    margin: 5vh 10vh 2vh 10vh;
+}
+
+.assinatura p{
+    color: white;
+    margin-bottom: 2vh;
+    font-size: 1.5vh;
+}
+
+.assinatura a{
+    color: white;
+    text-decoration: underline;
+}
